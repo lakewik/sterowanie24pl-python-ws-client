@@ -154,7 +154,7 @@ class MyDaemon(Daemon):
 			import os
 			import urllib2, urlparse, gzip
 			from StringIO import StringIO
-			sock = urllib.urlopen("http://s1.thekrzos.eu:1338/4?token=tRBxqYCk&uptime=tu")
+			sock = urllib.urlopen("http://s1.thekrzos.eu:1338/4?token=your_token&uptime=tu")
 			htmlSource = sock.read()
 			sock.close()
 			if htmlSource == "1":
