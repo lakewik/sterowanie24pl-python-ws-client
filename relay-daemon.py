@@ -157,7 +157,7 @@ class MyDaemon(Daemon):
 			sock = urllib.urlopen("http://s1.thekrzos.eu:1338/[raplace with your chip id]?token=your_token&uptime=your_uptime_in_s")
 			htmlSource = sock.read()
 			sock.close()
-			if htmlSource == "1":
+			if htmlSource[0] == "1":
 				os.system("gpio -g write 17 1")
 			else:
 				os.system("gpio -g write 17 0")
