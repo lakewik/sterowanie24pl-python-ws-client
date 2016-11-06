@@ -158,9 +158,9 @@ class MyDaemon(Daemon):
 			htmlSource = sock.read()
 			sock.close()
 			if htmlSource[0] == "1":
-				os.system("gpio -g write 17 1")
+				os.system("gpio -g write [your GPIO number] 1")
 			else:
-				os.system("gpio -g write 17 0")
+				os.system("gpio -g write [your GPIO number] 0")
 			time.sleep(0.1)
 			
 
